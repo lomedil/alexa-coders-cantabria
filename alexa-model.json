@@ -1,0 +1,130 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "coders cantabria",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "cierra coders cantabria",
+                        "cierra coders",
+                        "cierra skill"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "qué puedes hacer",
+                        "cuáles son tu habilidades"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "cierra skill",
+                        "para",
+                        "déjalo",
+                        "termina"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "SaludarTodosIntent",
+                    "slots": [],
+                    "samples": [
+                        "diga hola a los presentes",
+                        "diga hola a todos",
+                        "salude a todos",
+                        "salude"
+                    ]
+                },
+                {
+                    "name": "SaludarAlguienIntent",
+                    "slots": [
+                        {
+                            "name": "alguien",
+                            "type": "AMAZON.FirstName",
+                            "samples": [
+                                "{alguien} por ejemplo",
+                                "Saluda a {alguien}",
+                                "{alguien}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "saluda a alguien",
+                        "salude a {alguien}",
+                        "diga hola a {alguien}",
+                        "saluda a {alguien}"
+                    ]
+                },
+                {
+                    "name": "DespedirIntent",
+                    "slots": [],
+                    "samples": [
+                        "diga adiós",
+                        "se despida",
+                        "despidete",
+                        "se despida de todos",
+                        "puedes decir adiós",
+                        "despedirse",
+                        "di adiós",
+                        "decir adiós"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "SaludarAlguienIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "alguien",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.942728973405.1343762136440"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.942728973405.1343762136440",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "¿A cuál de los presentes quieres que salude?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "¿A cuál de los presentes?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "¿A qué persona quieres que salude?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "¿A quién?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "¿A quién quieres que salude?"
+                    }
+                ]
+            }
+        ]
+    }
+}

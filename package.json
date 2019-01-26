@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "ask-sdk": "^2.3.0",
+    "serverless": "^1.36.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha src/**/*.test.js"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
