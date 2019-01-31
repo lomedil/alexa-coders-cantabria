@@ -55,7 +55,7 @@ const ProximoEventoHandler = {
           months[nextEvent.getMonth()]
         } de ${
           nextEvent.getFullYear()
-        } de 6 y media a 8 y media. ¡ven y participa!`
+        }, de 6 y media a 8 y media. <say-as interpret-as="interjection">vamos</say-as>`
       )
       .getResponse();
   }
